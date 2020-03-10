@@ -1,0 +1,56 @@
+Lexical elements
+  - Comments
+      - Line comments //
+      - General comments /** ...... **/
+  - Tokens
+      - Forms the vocabulary of the language.
+      - Four classes :- Identifiers, Keywords, Operators & Punctuation, Literals
+      - Spaces (/n, enter, tab, whitespace) separates tokens.
+      - While breaking the input into tokens, the next token is the longest sequence of characters that form a valid token.
+  - Semicolons
+      - When the input is broken into tokens, a semicolon is automatically inserted into the token stream if the line's final token is
+        - an identifier
+        - an integer, floating-point, imaginary, rune or string literal
+        - one of the keywords break, continue, fallthrough, return
+        - one of the operators and punctuation ++, --, ), ], }
+      - To allow complex statements to occupy a single line, a semicolon may be omitted before a closing ) or }.
+  - Identifiers
+      - Name program entities such as variables and types.
+      - Can be combination of letters and digits, but has to start with a letter or an underscore.
+  - Keywords
+      - Following keywords are reserved
+      break        default      func         interface    select
+      case         defer        go           map          struct
+      chan         else         goto         package      switch
+      const        fallthrough  if           range        type
+      continue     for          import       return       var
+  - Operators & Punctuation
+      - Following is the list of Operators & Punctuations
+      +    &     +=    &=     &&    ==    !=    (    )
+      -    |     -=    |=     ||    <     <=    [    ]
+      *    ^     *=    ^=     <-    >     >=    {    }
+      /    <<    /=    <<=    ++    =     :=    ,    ;
+      %    >>    %=    >>=    --    !     ...   .    :
+           &^          &^=
+  - Literals
+      - Integer literals
+          - It's a sequence of digits representing an integer constant.
+          - decimal
+            An optional prefix sets a non-decimal base.
+          - binary (0b or 0B)
+          - octal (0o or 0O)
+          - hexadecimal (0x or 0X)
+          - For readability, an underscore character _ may appear after a base prefix or between successive digits
+      - Floating-point literals
+          - It's a decimal or hexadecimal representation of a floating-point constant.
+          - integer part + decimal point + fractional part + exponent part
+          - For readability, an underscore character _ may appear after a base prefix or between successive digits.
+      - Imaginary literals
+          - An imaginary literal represents the imaginary part of a complex constant.
+          - integer or floating-point literal + i
+      - Rune literals
+          - It represents a rune constant where an integer value recognizes a Unicode code point.
+      - String literals
+          - A string literal represents a string constant obtained from concatenating a sequence of characters.
+          - raw `xyz`
+          - interpreted "xyz" 
